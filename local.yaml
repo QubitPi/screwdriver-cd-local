@@ -1,0 +1,9 @@
+# disable coverage plugin because we don't need it for CD
+bookends:
+  default:
+    setup:
+      - scm
+      - screwdriver-cache-bookend
+    teardown:
+      - screwdriver-artifact-bookend
+      - screwdriver-cache-bookend

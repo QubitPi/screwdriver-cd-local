@@ -28,6 +28,7 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:rw
             - ./data/:/tmp/sd-data/:rw
+            - /usr/src/app/node_modules/screwdriver-api/config/local.yaml:/config/local.yaml
         environment:
             PORT: 80
             URI: http://${ip}:9001
@@ -299,6 +300,8 @@ def main():
     A few more things to note:
       - To stop/reset Screwdriver
         $ docker-compose -p screwdriver down
+        $ rm -rf ./data
+        $ docker-compose -p screwdriver up
       - If your internal IP changes, update the docker-compose.yml and your SCM OAuth application
       - In-a-box does not support Webhooks including PullRequests for triggering builds
       - To create your own cluster, see https://docs.screwdriver.cd/cluster-management/kubernetes
