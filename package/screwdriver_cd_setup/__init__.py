@@ -28,6 +28,7 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:rw
             - ./data/:/tmp/sd-data/:rw
+            # This path below references https://github.com/screwdriver-cd/screwdriver/blob/master/Dockerfile
             - /usr/src/app/node_modules/screwdriver-api/config/local.yaml:/config/local.yaml
         environment:
             PORT: 80
