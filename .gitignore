@@ -104,3 +104,5 @@ ENV/
 cobertura.xml
 
 .idea
+docker-compose.yml
+data
