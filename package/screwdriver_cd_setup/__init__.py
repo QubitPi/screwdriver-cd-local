@@ -192,6 +192,7 @@ def generate_scm_config(scm_plugin, ip): # pylint: disable=C0103
         client_secret_name = 'Client Secret'
         scm_config['secret'] = 'SUPER-SECRET-SIGNING-THING'
         avatar = 'avatars*.githubusercontent.com'
+        scm_config['privateRepo'] = True
     elif scm_plugin == 'bitbucket':
         service_name = 'Bitbucket.org'
         start_url = 'https://bitbucket.org/account/user/<your username>/oauth-consumers/new'
