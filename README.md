@@ -13,7 +13,7 @@ Quickstart
 
 Requires:
 
-- Python 2.7.11+
+- Python 3.7+
 - [Docker]
 - [Docker Compose 1.8.1+][docker-compose]
 
