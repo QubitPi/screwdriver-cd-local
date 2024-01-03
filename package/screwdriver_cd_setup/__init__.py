@@ -22,14 +22,15 @@ DOCKER_TEMPLATE = '''
 version: '2'
 services:
     api:
-        image: screwdrivercd/screwdriver:stable
+        image: jack20191124/screwdriver:latest
         ports:
             - 9001:80
+        privileged: true
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock:rw
             - ./data/:/tmp/sd-data/:rw
-            # This path below references https://github.com/screwdriver-cd/screwdriver/blob/master/Dockerfile
-            - ./local.yaml:/usr/src/app/node_modules/screwdriver-api/config/local.yaml
+            # This path below references https://github.com/QubitPi/screwdriver-cd-screwdriver/blob/master/Dockerfile
+            - ./local.yaml:/usr/src/app/node_modules/screwdriver-cd-api/config/local.yaml
         environment:
             PORT: 80
             URI: http://${ip}:9001
