@@ -19,7 +19,7 @@ Requires:
 
 1. [Login to Docker](https://docs.docker.com/engine/reference/commandline/login) with your Docker username (not
    email) or install [Docker Desktop]
-2. Run the below command in the terminal to bring up a Screwdriver cluster locally.
+2. Run the command below in the terminal to bring up a Screwdriver cluster locally.
 
    ```bash
    git clone https://github.com/QubitPi/screwdriver-cd-in-a-box.git
@@ -27,7 +27,7 @@ Requires:
    python3 setup.py
    ```
 
-3. We will be prompted to enter our desired SCM provider as well as our Client ID and Client Secret. Afterwards, type
+3. You will be prompted to enter your desired SCM provider as well as the Client ID and Client Secret. Afterwards, type
    `y` to launch Screwdriver!
 
 Documentation
