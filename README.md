@@ -36,8 +36,8 @@ Documentation
 - [screwdriver-cd-in-a-box](https://qubitpi.github.io/screwdriver-cd-guide/cluster-management/running-locally)
 - [Cluster setup](https://qubitpi.github.io/screwdriver-cd-guide/cluster-management/kubernetes) (not in-a-box anymore)
 
-[Docker]: https://www.docker.com/products/docker
-[docker-compose]: https://www.docker.com/products/docker-compose
+[Docker]: https://github.com/QubitPi/docker-install
+[docker-compose]: https://stackoverflow.com/a/74833777/14312712
 [Docker Desktop]: https://www.docker.com/products/docker-desktop/
 
 [GitHub Workflow Status]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-in-a-box/ci-cd.yml?branch=master&logo=github&style=for-the-badge
