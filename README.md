@@ -15,7 +15,7 @@ Requires:
 
 - Python 3.7+
 - [Docker]
-- [Docker Compose 1.8.1+][docker-compose]
+- [Docker Compose v2]
 
 1. [Login to Docker](https://docs.docker.com/engine/reference/commandline/login) with your Docker username (not
    email) or install [Docker Desktop]
@@ -37,7 +37,7 @@ Documentation
 - [Cluster setup](https://qubitpi.github.io/screwdriver-cd-guide/cluster-management/kubernetes) (not in-a-box anymore)
 
 [Docker]: https://github.com/QubitPi/docker-install
-[docker-compose]: https://stackoverflow.com/a/74833777/14312712
+[Docker Compose v2]: https://stackoverflow.com/a/66516826/14312712
 [Docker Desktop]: https://www.docker.com/products/docker-desktop/
 
 [GitHub Workflow Status]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-in-a-box/ci-cd.yml?branch=master&logo=github&style=for-the-badge
