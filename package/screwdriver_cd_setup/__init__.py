@@ -263,7 +263,6 @@ def main():
 
     print('👀   Checking prerequisites')
     check_component('docker')
-    check_component('docker compose')
     check_component('openssl')
 
     print('🔐   Generating signing secrets')
