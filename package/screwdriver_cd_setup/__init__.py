@@ -290,8 +290,8 @@ def main():
     prompt = get_input('    Would you like to run them now? (y/n) ')
     if prompt.lower() == 'y':
         call(['docker', 'pull', 'screwdrivercd/launcher:stable'])
-        call(['docker compose', 'pull'])
-        call(['docker compose', '-p', 'screwdriver', 'up', '-d'])
+        call(['docker', 'compose', 'pull'])
+        call(['docker', 'compose', '-p', 'screwdriver', 'up', '-d'])
         try:
             call(['open', Template('http://${ip}:9000').safe_substitute(fields)])
         except (CalledProcessError, FileNotFoundError):
