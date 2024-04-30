@@ -263,7 +263,7 @@ def main():
 
     print('👀   Checking prerequisites')
     check_component('docker')
-    check_component('docker-compose')
+    check_component('docker compose')
     check_component('openssl')
 
     print('🔐   Generating signing secrets')
@@ -283,16 +283,16 @@ def main():
         Template('''
     Just run the following commands to get started!
       $ docker pull screwdrivercd/launcher:stable
-      $ docker-compose pull
-      $ docker-compose -p screwdriver up -d
+      $ docker compose pull
+      $ docker compose -p screwdriver up -d
       $ open http://${ip}:9000
     ''').safe_substitute(fields)
     )
     prompt = get_input('    Would you like to run them now? (y/n) ')
     if prompt.lower() == 'y':
         call(['docker', 'pull', 'screwdrivercd/launcher:stable'])
-        call(['docker-compose', 'pull'])
-        call(['docker-compose', '-p', 'screwdriver', 'up', '-d'])
+        call(['docker compose', 'pull'])
+        call(['docker compose', '-p', 'screwdriver', 'up', '-d'])
         try:
             call(['open', Template('http://${ip}:9000').safe_substitute(fields)])
         except (CalledProcessError, FileNotFoundError):
@@ -304,9 +304,9 @@ def main():
     print('''
     A few more things to note:
       - To stop/reset Screwdriver
-        $ docker-compose -p screwdriver down
+        $ docker compose -p screwdriver down
         $ rm -rf ./data
-        $ docker-compose -p screwdriver up
+        $ docker compose -p screwdriver up
       - If your internal IP changes, update the docker-compose.yml and your SCM OAuth application
       - In-a-box does not support Webhooks including PullRequests for triggering builds
       - To create your own cluster, see https://docs.screwdriver.cd/cluster-management/kubernetes
