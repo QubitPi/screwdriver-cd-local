@@ -7,3 +7,11 @@ bookends:
     teardown:
       - screwdriver-artifact-bookend
       - screwdriver-cache-bookend
+
+# Enable job chaining in PR
+webhooks:
+  username: paion-data-sd-buildbot
+  ignoreCommitsBy: []
+  restrictPR: none
+  chainPR: true # https://screwdriver-docs.qubitpi.org/user-guide/configuration/workflow#defining-workflow-order
+  maxBytes: 1048576 # 1MB
