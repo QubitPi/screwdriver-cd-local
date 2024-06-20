@@ -22,6 +22,9 @@ Requires:
 2. Run the command below in the terminal to bring up a Screwdriver cluster locally.
 
    ```bash
+   docker pull node:18
+   docker pull buildpack-deps:22.04-scm
+
    git clone https://github.com/QubitPi/screwdriver-cd-in-a-box.git
    cd screwdriver-cd-in-a-box
    python3 setup.py
