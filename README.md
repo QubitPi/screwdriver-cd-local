@@ -1,7 +1,7 @@
-Screwdriver in a Box
-====================
+Running Screwdriver Locally
+===========================
 
-[![GitHub Workflow Status][GitHub Workflow Status]](https://github.com/QubitPi/screwdriver-cd-in-a-box/actions/workflows/ci-cd.yml)
+[![GitHub Workflow Status badge][GitHub Workflow Status badge]][GitHub Workflow Status URL]
 ![Last Commit](https://img.shields.io/github/last-commit/QubitPi/screwdriver-cd-in-a-box/master?logo=github&style=for-the-badge)
 [![License Badge]](./LICENSE)
 
@@ -11,38 +11,32 @@ All data written to a database will be stored in `data` directory.
 Quickstart
 ----------
 
-Requires:
-
-- Python 3.7+
-- [Docker]
-- [Docker Compose v2]
-
-1. [Login to Docker](https://docs.docker.com/engine/reference/commandline/login) with your Docker username (not
-   email) or install [Docker Desktop]
-2. Run the command below in the terminal to bring up a Screwdriver cluster locally.
+1. [Install Docker]
+2. [Install Docker Compose][Docker Compose v2]
+3. Run the command below in the terminal to bring up a Screwdriver cluster locally.
 
    ```bash
    docker pull node:18
    docker pull buildpack-deps:22.04-scm
 
-   git clone https://github.com/QubitPi/screwdriver-cd-in-a-box.git
-   cd screwdriver-cd-in-a-box
+   git clone https://github.com/QubitPi/screwdriver-cd-local.git
+   cd screwdriver-cd-local
    python3 setup.py
    ```
 
-3. You will be prompted to enter your desired SCM provider as well as the Client ID and Client Secret. Afterwards, type
+4. You will be prompted to enter your desired SCM provider as well as the Client ID and Client Secret. Afterwards, type
    `y` to launch Screwdriver!
 
 Documentation
 -------------
 
-- [screwdriver-cd-in-a-box](https://qubitpi.github.io/screwdriver-cd-guide/cluster-management/running-locally)
-- [Cluster setup](https://qubitpi.github.io/screwdriver-cd-guide/cluster-management/kubernetes) (not in-a-box anymore)
+- [Running Screwdriver in Docker Compose](https://screwdriver-docs.qubitpi.org/cluster-management/docker-compose)
+- [Cluster setup](https://screwdriver-docs.qubitpi.org/cluster-management/kubernetes) (__not local anymore__)
 
-[Docker]: https://github.com/QubitPi/docker-install
+[Install Docker]: https://github.com/QubitPi/docker-install
 [Docker Compose v2]: https://stackoverflow.com/a/66516826/14312712
-[Docker Desktop]: https://www.docker.com/products/docker-desktop/
 
-[GitHub Workflow Status]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-in-a-box/ci-cd.yml?branch=master&logo=github&style=for-the-badge
+[GitHub Workflow Status badge]: https://img.shields.io/github/actions/workflow/status/QubitPi/screwdriver-cd-local/ci-cd.yml?branch=master&logo=github&style=for-the-badge
+[GitHub Workflow Status URL]: https://github.com/QubitPi/screwdriver-cd-local/actions/workflows/ci-cd.yml
 
 [License Badge]: https://img.shields.io/badge/license-BSD%203--Clause-blue.svg?style=for-the-badge
