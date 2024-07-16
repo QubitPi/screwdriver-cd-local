@@ -17,6 +17,7 @@ Quickstart
 
    ```bash
    docker pull node:18
+   docker pull screwdrivercd/launcher
    docker pull buildpack-deps:22.04-scm
 
    git clone https://github.com/QubitPi/screwdriver-cd-local.git
